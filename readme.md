@@ -36,7 +36,7 @@ npm run dev
 
 > It's going to run the server on port 3000
 
-- That's it! to see the project just go to [http://localhost:3000/](http://localhost:3000/), and you're ready to rock!
+- That's it! to see the project just go to [localhost port 3000](http://localhost:3000/), and you're ready to rock!
 
 ## Made with
 
