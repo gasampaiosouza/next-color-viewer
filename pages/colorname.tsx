@@ -1,7 +1,11 @@
 import Layout from '../components/Layout';
 import { useState } from 'react';
 
+import Link from 'next/link';
+
 import ErrorMessage from '../components/ErrorMessage';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 const colorName = () => {
   const [colorName, setColorName] = useState('');
@@ -12,14 +16,17 @@ const colorName = () => {
 
   let timer: number;
 
-  function getData(value: string) {
+  const getData = (value: string) => {
     const time = 1000;
     clearTimeout(timer);
 
     timer = window.setTimeout(() => {
+      if (!value) return;
+
       if (value.match(/[0-9a-fA-F]+/)) {
         setColor({
           ...color,
+          error: false,
           color: `#${value}`,
         });
 
@@ -32,10 +39,17 @@ const colorName = () => {
           error: true,
         });
     }, time);
-  }
+  };
 
   return (
     <Layout>
+      <Link href="/">
+        <div className="back--container">
+          <FontAwesomeIcon icon={faArrowLeft} className="arrow--icon" />
+          <span>Back to home</span>
+        </div>
+      </Link>
+
       <h1 className="title">Get any color name</h1>
 
       <div className="input--container my-5">
@@ -45,7 +59,7 @@ const colorName = () => {
           placeholder="Your color"
           maxLength={6}
           onChange={(e) => getData(e.target.value)}
-          required
+          // required
         />
         <span className="hashtag">
           #
@@ -63,7 +77,11 @@ const colorName = () => {
         </span>
       </p>
 
-      <ErrorMessage title="Invalid color" desc="Please, write valid color" />
+      {color.error ? (
+        <ErrorMessage title="Invalid color" desc="Please, write valid color" />
+      ) : (
+        <></>
+      )}
     </Layout>
   );
 };

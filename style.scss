@@ -1,5 +1,6 @@
-$main: #06d6a0; // #32f
+$main: #06d6a0; // #32f, #f32c
 $black: #343a40;
+$error: #e63946;
 
 * {
   color: $black;
@@ -33,16 +34,43 @@ $black: #343a40;
   }
 }
 
+.back--container {
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+
+  border-radius: 5px;
+
+  padding: 15px 25px;
+  width: 190px;
+  font-weight: 900;
+
+  display: flex;
+  justify-content: space-between;
+
+  transition: box-shadow 0.1s ease-in-out;
+
+  &:hover {
+    box-shadow: 5px 5px 15px rgba($black, 0.15);
+  }
+
+  .arrow--icon {
+    color: $black;
+    width: 15px;
+  }
+}
+
 .input--container {
   width: 300px;
   height: 50px;
   display: flex;
   flex-direction: row-reverse;
   box-shadow: 0 5px 15px rgba($black, 0.15);
+  overflow: visible;
 
   .hashtag {
     position: relative;
-    overflow: visible;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,8 +82,8 @@ $black: #343a40;
       position: absolute;
       width: 3px;
       height: 0;
-      right: -3px;
-      bottom: 0;
+      right: 0;
+      bottom: -2px;
       background: #eee;
       border: 0.3px solid rgba($black, 0.1);
       transition: 0.2s ease-in-out;
@@ -73,9 +101,8 @@ $black: #343a40;
       text-transform: none;
     }
 
-    &:focus ~ .hashtag .color--bar,
-    &:valid ~ .hashtag .color--bar {
-      top: 0;
+    &:focus ~ .hashtag > .color--bar {
+      top: 0px;
       height: 100%;
     }
   }
@@ -95,12 +122,13 @@ $black: #343a40;
   right: -400px;
 
   animation: appear 5s ease-in-out;
+  box-shadow: 5px 5px 15px rgba($error, 0.5);
 
-  width: 400px;
+  width: 350px;
 
   text-align: left;
   padding: 10px 40px;
-  background: #e63946;
+  background: $error;
 
   border-radius: 2px 0 0 2px;
 
@@ -110,5 +138,24 @@ $black: #343a40;
 
   .error--desc {
     color: #fff;
+  }
+}
+
+@keyframes appear {
+  0% {
+    transform: translate(0);
+    opacity: 0;
+  }
+
+  25%,
+  50%,
+  75% {
+    transform: translateX(-400px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(0);
+    opacity: 0;
   }
 }
