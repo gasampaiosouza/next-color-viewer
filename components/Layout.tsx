@@ -1,5 +1,4 @@
 import Head from 'next/head';
-// import css from '../style.scss';
 
 const Layout = (props: { children: JSX.Element[] | JSX.Element }) => (
   <div

@@ -1,7 +1,7 @@
 import Layout from '../components/Layout';
 import { useState } from 'react';
 
-import { Message } from 'semantic-ui-react';
+import ErrorMessage from '../components/ErrorMessage';
 
 const colorName = () => {
   const [colorName, setColorName] = useState('');
@@ -57,16 +57,13 @@ const colorName = () => {
       </div>
 
       <p className="desc">
-        Your color's name: <span className="color--name">{colorName}</span>
+        Your color's name:{' '}
+        <span className="color--name" style={{ color: color['color'] }}>
+          {colorName}
+        </span>
       </p>
 
-      <Message negative>
-        <Message.Header>
-          We're sorry we can't apply that discount
-        </Message.Header>
-        <p>That offer has expired</p>
-      </Message>
-      {/* {color.error ? <Message error /> : <></>} */}
+      <ErrorMessage title="Invalid color" desc="Please, write valid color" />
     </Layout>
   );
 };
