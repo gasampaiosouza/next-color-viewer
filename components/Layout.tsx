@@ -1,9 +1,16 @@
 import Head from 'next/head';
+import { ReactNode } from 'react';
 
-const Layout = (props: { children: JSX.Element[] | JSX.Element }) => (
+type LayoutType = {
+  children?: ReactNode;
+  style?: object;
+  className?: string;
+};
+
+const Layout = (props: LayoutType) => (
   <div
-    className="container d-flex flex-column justify-content-center align-items-center mt-4 text-center"
-    style={{ height: '75vh' }}
+    className={`${props.className} d-flex flex-column justify-content-center align-items-center text-center`}
+    style={{ ...props.style }}
   >
     <Head>
       <title>Color viewer</title>

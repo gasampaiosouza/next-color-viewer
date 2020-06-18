@@ -6,6 +6,7 @@ import Link from 'next/link';
 import ErrorMessage from '../components/ErrorMessage';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import BackArrow from '../components/BackArrow';
 
 const colorName = () => {
   const [colorName, setColorName] = useState('');
@@ -42,13 +43,8 @@ const colorName = () => {
   };
 
   return (
-    <Layout>
-      <Link href="/">
-        <div className="back--container">
-          <FontAwesomeIcon icon={faArrowLeft} className="arrow--icon" />
-          <span>Back to home</span>
-        </div>
-      </Link>
+    <Layout style={{ height: '75vh' }} className="container mt-4">
+      <BackArrow />
 
       <h1 className="title">Get any color name</h1>
 
@@ -76,7 +72,7 @@ const colorName = () => {
           className="color--name"
           style={{ color: color.error ? 'red' : color['color'] }}
         >
-          {color.error ? ':[' : colorName}
+          {color.error ? ':[' : colorName || 'write something'}
         </span>
       </p>
 
