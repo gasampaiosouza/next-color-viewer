@@ -26,9 +26,9 @@ You already have the `#`, so just write your HEX value! Else, you can see some e
 git clone https://github.com/gasampaiosouza/next-color-viewer.git
 ```
 
-- After that, you need to install the packages, so still in your console, white `npm install` or `yarn add`
+- Then, inside the `/next-color-viewer` folder you need to install the packages. So still in your console, write `npm install` or `yarn add`
 
-- Then, inside the `/next-color-viewer` folder, just run
+- After that, just run
 
 ```console
 npm run dev
