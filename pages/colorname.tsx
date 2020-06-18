@@ -72,8 +72,11 @@ const colorName = () => {
 
       <p className="desc">
         Your color's name:{' '}
-        <span className="color--name" style={{ color: color['color'] }}>
-          {colorName}
+        <span
+          className="color--name"
+          style={{ color: color.error ? 'red' : color['color'] }}
+        >
+          {color.error ? ':[' : colorName}
         </span>
       </p>
 
