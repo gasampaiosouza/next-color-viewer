@@ -23,7 +23,7 @@ const colorName = () => {
     timer = window.setTimeout(() => {
       if (!value) return;
 
-      if (value.match(/[0-9a-fA-F]+/)) {
+      if (value.match(/^[0-9a-fA-F]+/)) {
         setColor({
           ...color,
           error: false,
