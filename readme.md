@@ -1,6 +1,6 @@
 # Next color viewer
 
-I made this "color viewer" with `nextJS`. Here you can see your favorite colors' name, and get some random ones if you want!
+I made this "color viewer" with `NextJS`. Here you can see your favorite colors' name, and get some random ones if you want!
 
 ## How it works
 
