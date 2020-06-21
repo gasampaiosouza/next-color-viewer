@@ -14,11 +14,8 @@ const random: React.FC = () => {
     const letters = '0123456789ABCDEF'.split('');
     let color = '';
 
-    // change loop
-
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 6; i++)
       color += letters[Math.floor(Math.random() * 16)];
-    }
 
     const contrast = getContrastYIQ(color);
 

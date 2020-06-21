@@ -4,11 +4,13 @@ I made this "color viewer" with `nextJS`. Here you can see your favorite colors'
 
 ## How it works
 
-At your first view, you'll see just a button ( i'll add more as time goes by ).
+At your first view, you'll see 2 buttons, with 2 different paths.
 
-![Page first view](https://imgur.com/Xzgrddj.png)
+![Page first view](https://imgur.com/CBb05y3.png) **change**
 
-Then, when you click it, you'll go to `/colorname`, there you can see the name of any color you want, just like this:
+When you click the first one, it'll redirect you to `/colorname`, and the second one to `/random`.
+
+## Color name
 
 ![Color name view](https://imgur.com/AV2kmr0.png)
 
@@ -17,6 +19,18 @@ You already have the `#`, so just write your HEX value! Else, you can see some e
 ![Error page view](https://imgur.com/EYpLPdE.png)
 
 > It happens when you write something wrong
+
+## Random color
+
+At first, you're going to see a blank page with "Click" in the middle of it all.
+
+![Random view](https://imgur.com/mqjqbsN.png)
+
+When you left-click, it's going to generate a random color for you
+
+![Random view](https://imgur.com/CN5jXhp.png)
+
+> and if you right-click, you copy it to your clipboard.
 
 ## Installation
 
