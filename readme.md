@@ -30,7 +30,7 @@ When you left-click, it's going to generate a random color for you
 
 ![Random view](https://imgur.com/CN5jXhp.png)
 
-> and if you right-click, you copy it to your clipboard.
+> and if you right-click, you copy it to your clipboard. `3E547A`
 
 ## Installation
 
