@@ -57,6 +57,7 @@ npm run dev
 - NextJS | React
 - TypeScript
 - Sass
+- Bootstrap
 
 ## Thank you
 
