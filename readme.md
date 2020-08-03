@@ -40,7 +40,7 @@ When you left-click, it's going to generate a random color for you
 git clone https://github.com/gasampaiosouza/next-color-viewer.git
 ```
 
-- Then, inside the `/next-color-viewer` folder you need to install the packages. So still in your console, write `npm install` or `yarn add`
+- Then, inside the `/next-color-viewer` folder you need to install the packages. So still in your console, write `npm install` or `yarn`
 
 - After that, just run
 
